@@ -1,11 +1,54 @@
 $typeFont: 'Space Mono', monospace;
 $colorPrimary: hsl(172, 67%, 45%);
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    background: hsl(185, 41%, 84%);
+    font-family: $typeFont;
+    text-align: center;
+    .contenedor{
+        background: hsl(0, 0%, 100%);
+        text-align-last: left;
+        padding: 20px;
+        width: 70%;
+        margin: auto;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .contenedor-botones{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .general-form{
+            width: 30%;
+            height: 40px;
+            margin: 5px 0;
+        }
 
+        .boton{
+            background: hsl(183, 100%, 15%);
+        }
+        .custom{
+           
+            outline: none;
+        }
+    }
+}
 
-
-
-
+h1{
+    font-size: 28px;
+    margin: 80px 0 40px 0;
+}
 
 //Contribuciones
 .attribution { 
