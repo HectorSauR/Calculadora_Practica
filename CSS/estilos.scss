@@ -12,6 +12,7 @@ body{
     background: hsl(185, 41%, 84%);
     font-family: $typeFont;
     text-align: center;
+    
     .contenedor{
         background: hsl(0, 0%, 100%);
         text-align-last: left;
@@ -21,28 +22,44 @@ body{
         border-radius: 30px;
         display: flex;
         justify-content: space-around;
+        .texto{
+            color: hsl(200, 1%, 51%);
+            font-family: $typeFont;
+            font-weight: 600;
+        }
         
-    }
-    .contenedor-botones{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        
-        .general-form{
-            width: 30%;
-            height: 40px;
-            margin: 5px 0;
+        .contenedor-botones{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            .general-form{
+                width: 30%;
+                height: 40px;
+                margin: 5px 0;
+                border-radius: 5px;
+                font-family: $typeFont;
+                font-size: 24px;
+                color: hsl(0, 0%, 100%);
+                border: none;
+                text-align: center;
+            }
+    
+            .button{
+                background: hsl(183, 100%, 15%);
+                color: hsl(0, 0%, 100%);
+                text-decoration: none;
+            }
+            
+            .custom{
+                outline: none;
+                color: hsl(200, 1%, 51%);
+            }
         }
 
-        .boton{
-            background: hsl(183, 100%, 15%);
-        }
-        .custom{
-           
-            outline: none;
-        }
     }
+    
 }
 
 h1{

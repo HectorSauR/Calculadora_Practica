@@ -26,7 +26,13 @@ body .contenedor {
       justify-content: space-around;
 }
 
-body .contenedor-botones {
+body .contenedor .texto {
+  color: #818283;
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+}
+
+body .contenedor .contenedor-botones {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,18 +44,27 @@ body .contenedor-botones {
           justify-content: space-between;
 }
 
-body .contenedor-botones .general-form {
+body .contenedor .contenedor-botones .general-form {
   width: 30%;
   height: 40px;
   margin: 5px 0;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  color: white;
+  border: none;
+  text-align: center;
 }
 
-body .contenedor-botones .boton {
+body .contenedor .contenedor-botones .button {
   background: #00494d;
+  color: white;
+  text-decoration: none;
 }
 
-body .contenedor-botones .custom {
+body .contenedor .contenedor-botones .custom {
   outline: none;
+  color: #818283;
 }
 
 h1 {
