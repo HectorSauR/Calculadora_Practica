@@ -12,10 +12,10 @@ body {
   text-align: center;
 }
 
-body .contenedor {
+body main .contenedor {
   background: white;
   text-align-last: left;
-  padding: 20px;
+  padding: 30px;
   width: 70%;
   margin: auto;
   border-radius: 30px;
@@ -26,13 +26,35 @@ body .contenedor {
       justify-content: space-around;
 }
 
-body .contenedor .texto {
+body main .contenedor .input {
+  text-align: right;
+  border-style: none;
+  font-size: 24px;
+  background: rgba(0, 73, 77, 0.131);
+  width: 100%;
+  height: 50px;
+  color: #00494d;
+  padding-left: 50px;
+}
+
+body main .contenedor .dolar {
+  position: absolute;
+  font-size: 24px;
+}
+
+body main .contenedor .texto {
   color: #818283;
   font-family: "Space Mono", monospace;
   font-weight: 600;
+  margin-top: 20px;
 }
 
-body .contenedor .contenedor-botones {
+body main .contenedor .izquierda {
+  width: 48%;
+  margin-right: 5px;
+}
+
+body main .contenedor .izquierda .contenedor-botones {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,7 +66,7 @@ body .contenedor .contenedor-botones {
           justify-content: space-between;
 }
 
-body .contenedor .contenedor-botones .general-form {
+body main .contenedor .izquierda .contenedor-botones .general-form {
   width: 30%;
   height: 40px;
   margin: 5px 0;
@@ -53,18 +75,28 @@ body .contenedor .contenedor-botones .general-form {
   font-size: 24px;
   color: white;
   border: none;
-  text-align: center;
 }
 
-body .contenedor .contenedor-botones .button {
+body main .contenedor .izquierda .contenedor-botones .button {
   background: #00494d;
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 
-body .contenedor .contenedor-botones .custom {
+body main .contenedor .izquierda .contenedor-botones .custom {
   outline: none;
   color: #818283;
+  background: #d0cdcd;
+  text-align: center;
+}
+
+body main .contenedor .derecha {
+  background: #00494d;
+  margin: 20px 0 0 10px;
+  width: 48%;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 h1 {
