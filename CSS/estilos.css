@@ -1,23 +1,23 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   background: #c5e4e7;
   font-family: "Space Mono", monospace;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
 body main .contenedor {
   background: white;
-  text-align-last: left;
+  text-align: justify;
   padding: 30px;
   width: 70%;
   margin: auto;
+  margin-bottom: 20px;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,7 +26,20 @@ body main .contenedor {
       justify-content: space-around;
 }
 
-body main .contenedor .input {
+body main .contenedor .texto {
+  color: #818283;
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+body main .contenedor .izquierda {
+  width: 48%;
+  margin-right: 5px;
+}
+
+body main .contenedor .izquierda .input {
   text-align: right;
   border-style: none;
   font-size: 24px;
@@ -34,24 +47,19 @@ body main .contenedor .input {
   width: 100%;
   height: 50px;
   color: #00494d;
-  padding-left: 50px;
+  outline: none;
+  padding-right: 20px;
 }
 
-body main .contenedor .dolar {
+body main .contenedor .izquierda .contenedor_bill {
+  margin-bottom: 30px;
+}
+
+body main .contenedor .izquierda .contenedor_bill .dolar {
   position: absolute;
   font-size: 24px;
-}
-
-body main .contenedor .texto {
-  color: #818283;
-  font-family: "Space Mono", monospace;
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-body main .contenedor .izquierda {
-  width: 48%;
-  margin-right: 5px;
+  margin: 12px 0 0 5px;
+  color: rgba(0, 73, 77, 0.412);
 }
 
 body main .contenedor .izquierda .contenedor-botones {
@@ -64,6 +72,13 @@ body main .contenedor .izquierda .contenedor-botones {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+body main .contenedor .izquierda .contenedor-botones a {
+  display: inline-block;
+  text-align: center;
 }
 
 body main .contenedor .izquierda .contenedor-botones .general-form {
@@ -75,33 +90,90 @@ body main .contenedor .izquierda .contenedor-botones .general-form {
   font-size: 24px;
   color: white;
   border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main .contenedor .izquierda .contenedor-botones .button {
   background: #00494d;
   color: white;
   text-decoration: none;
-  text-align: center;
 }
 
 body main .contenedor .izquierda .contenedor-botones .custom {
   outline: none;
-  color: #818283;
+  color: #00494d;
   background: #d0cdcd;
   text-align: center;
 }
 
+body main .contenedor .izquierda .contenedor-people .persona {
+  position: absolute;
+  font-size: 24px;
+  margin: 22px 0 0 5px;
+  color: rgba(0, 73, 77, 0.412);
+}
+
+body main .contenedor .izquierda .contenedor-people .numPeople {
+  margin-top: 10px;
+}
+
 body main .contenedor .derecha {
   background: #00494d;
-  margin: 20px 0 0 10px;
   width: 48%;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .contenedor .derecha .texto-pr {
+  color: rgba(255, 255, 255, 0.802);
+  font-size: 20px;
+  margin: 30px 0 0 20px;
+}
+
+body main .contenedor .derecha .texto-sc {
+  color: #5e7a7d;
+  margin-left: 20px;
+}
+
+body main .contenedor .derecha .input-total, body main .contenedor .derecha .input-amount {
+  font-size: 30px;
+  text-align: right;
+  margin-left: 20px;
+}
+
+body main .contenedor .derecha .contenedor-reset {
+  width: 100%;
+  position: relative;
+  top: 4rem;
+}
+
+body main .contenedor .derecha .contenedor-reset .reset {
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+  font-size: 24px;
+  background: #26c0ab;
+  border-radius: 5px;
+  color: #00494d;
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 24px;
   margin: 80px 0 40px 0;
+  font-weight: 200;
+  color: #00494d;
+  text-align: center;
 }
 
 .attribution {

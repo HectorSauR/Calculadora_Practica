@@ -20,8 +20,8 @@
   <h1>SPLI<br>
     TTER</h1>
   <main>
-    
     <div class="contenedor">
+      
       <div class="izquierda">
         
         <div class="contenedor_bill">
@@ -29,6 +29,7 @@
           <i class='bx bx-dollar dolar'></i>
           <input type="text" name="bill" id="bill" placeholder="0" class="bill input">
         </div>
+
         <p class="texto">Select Tip %</p>
         <div class="contenedor-botones">
           <a href="#" class="general-form button">5%</a>
@@ -36,29 +37,36 @@
           <a href="#" class="general-form button">15%</a>
           <a href="#" class="general-form button">25%</a>
           <a href="#" class="general-form button">50%</a>
-          <input
-            type="text"
-            name="custom"
-            class="general-form button custom"
-            id="custom"
-            placeholder="Custom"
-          />
-      </div>
+          <input type="text" name="custom" class="general-form custom" id="custom" placeholder="Custom"/>
+        
+        </div>
+        <div class="contenedor-people">
          
-        <p class="texto">Number of People</p>
-        <img src="images/icon-person.svg" alt="" class="person">
-        <input type="text" name="numPeople" class="numPeople input" id="numPeople" placeholder="0">
+          <p class="texto">Number of People</p>
+          <i class='bx bxs-user persona'></i>
+          <input type="text" name="numPeople" class="numPeople input" id="numPeople" placeholder="0">
        
-        
+        </div>
+
       </div>
+
       <div class="derecha">
-        <p class="texto-pr amount">Tip Amount</p>
-        <p class="texto-sc person">/ person</p>
+
+        <div class="contenedor-amount">
+          <p class="texto-pr amount">Tip Amount</p>
+          <p class="texto-sc person">/ person</p>
+        </div>
+        <input type="text" class="input-amount" placeholder="amount">
+        <div class="contenedor-total">
+          <p class="texto-pr total">Total</p>
+          <p class="texto-sc person">/ person</p>
+        </div>
+        <input type="text" class="input-total" placeholder="total">
         
-        <p class="texto-pr total">Total</p>
-        <p class="texto-sc person">/ person</p>
-        
-        <a href="#" class="reset">RESET</a>
+        <div class="contenedor-reset">
+          <a href="#" class="reset">RESET</a>
+        </div>
+
       </div>
       
     </div>
