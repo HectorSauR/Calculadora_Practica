@@ -12,13 +12,10 @@
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <style>
-    
-  </style>
 </head>
 <body>
-  <h1>SPLI<br>
-    TTER</h1>
+  <h1>S P L I<br>
+    T T E R</h1>
   <main>
     <div class="contenedor">
       
@@ -32,20 +29,21 @@
 
         <p class="texto">Select Tip %</p>
         <div class="contenedor-botones">
-          <a href="#" class="general-form button">5%</a>
-          <a href="#" class="general-form button">10%</a>
-          <a href="#" class="general-form button">15%</a>
-          <a href="#" class="general-form button">25%</a>
-          <a href="#" class="general-form button">50%</a>
+          <button class="general-form button" id="button" value="5">5%</button>
+          <button class="general-form button" id="button" value="10">10%</button>
+          <button class="general-form button" id="button" value="15">15%</button>
+          <button class="general-form button" id="button" value="25">25%</button>
+          <button class="general-form button" id="button" value="50">50%</button>
           <input type="text" name="custom" class="general-form custom" id="custom" placeholder="Custom"/>
         
         </div>
         <div class="contenedor-people">
-         
+        
           <p class="texto">Number of People</p>
+          <p class="texto aviso-error" id="aviso-error">Can´t be zero</p>
           <i class='bx bxs-user persona'></i>
           <input type="text" name="numPeople" class="numPeople input" id="numPeople" placeholder="0">
-       
+      
         </div>
 
       </div>
@@ -56,15 +54,16 @@
           <p class="texto-pr amount">Tip Amount</p>
           <p class="texto-sc person">/ person</p>
         </div>
-        <input type="text" class="input-amount" placeholder="amount">
+        <input type="text" class="input-amount" id="amount" placeholder="$ 0.00" readonly>
+
         <div class="contenedor-total">
           <p class="texto-pr total">Total</p>
           <p class="texto-sc person">/ person</p>
         </div>
-        <input type="text" class="input-total" placeholder="total">
+        <input type="text" class="input-total" id="total" placeholder="$ 0.00" readonly>
         
         <div class="contenedor-reset">
-          <a href="#" class="reset">RESET</a>
+          <input type="submit" href="#" class="reset" id="reset" disabled value="RESET">
         </div>
 
       </div>
@@ -76,5 +75,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Hector Sauceda</a>.
   </div>
+  <script src="JS/calculadora.js"></script>
 </body>
 </html>

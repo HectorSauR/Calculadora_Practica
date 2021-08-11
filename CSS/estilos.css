@@ -32,6 +32,7 @@ body main .contenedor .texto {
   font-weight: 600;
   margin-top: 20px;
   font-size: 20px;
+  display: inline-block;
 }
 
 body main .contenedor .izquierda {
@@ -49,10 +50,17 @@ body main .contenedor .izquierda .input {
   color: #00494d;
   outline: none;
   padding-right: 20px;
+  font-weight: 600;
 }
 
 body main .contenedor .izquierda .contenedor_bill {
   margin-bottom: 30px;
+  position: relative;
+}
+
+body main .contenedor .izquierda .contenedor_bill .bill:focus {
+  border: 2px solid #26c0ab;
+  border-radius: 5px;
 }
 
 body main .contenedor .izquierda .contenedor_bill .dolar {
@@ -60,6 +68,8 @@ body main .contenedor .izquierda .contenedor_bill .dolar {
   font-size: 24px;
   margin: 12px 0 0 5px;
   color: rgba(0, 73, 77, 0.412);
+  top: 50px;
+  left: 10px;
 }
 
 body main .contenedor .izquierda .contenedor-botones {
@@ -99,6 +109,16 @@ body main .contenedor .izquierda .contenedor-botones .button {
   background: #00494d;
   color: white;
   text-decoration: none;
+  font-weight: 600;
+}
+
+body main .contenedor .izquierda .contenedor-botones .button:focus {
+  background: #26c0ab;
+  color: #00494d;
+}
+
+body main .contenedor .izquierda .contenedor-botones .button:hover {
+  cursor: pointer;
 }
 
 body main .contenedor .izquierda .contenedor-botones .custom {
@@ -106,6 +126,18 @@ body main .contenedor .izquierda .contenedor-botones .custom {
   color: #00494d;
   background: #d0cdcd;
   text-align: center;
+  font-weight: 600;
+}
+
+body main .contenedor .izquierda .contenedor-botones .custom:focus {
+  border: 2px solid #26c0ab;
+  border-radius: 5px;
+}
+
+body main .contenedor .izquierda .contenedor-people {
+  position: relative;
+  overflow: visible;
+  margin-bottom: 10px;
 }
 
 body main .contenedor .izquierda .contenedor-people .persona {
@@ -113,23 +145,33 @@ body main .contenedor .izquierda .contenedor-people .persona {
   font-size: 24px;
   margin: 22px 0 0 5px;
   color: rgba(0, 73, 77, 0.412);
+  top: 50px;
+  left: 10px;
 }
 
 body main .contenedor .izquierda .contenedor-people .numPeople {
   margin-top: 10px;
 }
 
+body main .contenedor .izquierda .contenedor-people .aviso-error {
+  color: red;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: 200;
+  display: none;
+}
+
 body main .contenedor .derecha {
   background: #00494d;
   width: 48%;
   border-radius: 10px;
-  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  position: relative;
 }
 
 body main .contenedor .derecha .texto-pr {
@@ -143,35 +185,75 @@ body main .contenedor .derecha .texto-sc {
   margin-left: 20px;
 }
 
+body main .contenedor .derecha .contenedor-amount, body main .contenedor .derecha .contenedor-total {
+  width: 49.5%;
+  position: absolute;
+}
+
+body main .contenedor .derecha .contenedor-amount {
+  top: 20px;
+  left: 5%;
+}
+
+body main .contenedor .derecha .contenedor-total {
+  top: 100px;
+  left: 5%;
+}
+
 body main .contenedor .derecha .input-total, body main .contenedor .derecha .input-amount {
-  font-size: 30px;
+  font-size: 40px;
   text-align: right;
-  margin-left: 20px;
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  border-style: none;
+  background: none;
+  color: #26c0ab;
+  width: 49.5%;
+  outline: none;
+  position: absolute;
+}
+
+body main .contenedor .derecha .input-total {
+  right: 50px;
+  top: 125px;
+}
+
+body main .contenedor .derecha .input-amount {
+  right: 50px;
+  top: 45px;
 }
 
 body main .contenedor .derecha .contenedor-reset {
   width: 100%;
-  position: relative;
-  top: 4rem;
+  position: absolute;
+  bottom: 2rem;
 }
 
 body main .contenedor .derecha .contenedor-reset .reset {
   text-align: center;
   margin: auto;
   width: 80%;
+  height: 40px;
   display: block;
   text-decoration: none;
   padding: 5px 0;
-  font-size: 24px;
-  background: #26c0ab;
+  font-size: 20px;
+  background: rgba(89, 232, 213, 0.118);
   border-radius: 5px;
+  border-style: none;
   color: #00494d;
+  outline: none;
+  cursor: pointer;
+}
+
+body main .contenedor .derecha .contenedor-reset .reset:hover {
+  background: #59e8d5;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   margin: 80px 0 40px 0;
-  font-weight: 200;
+  font-weight: 600;
   color: #00494d;
   text-align: center;
 }
@@ -183,5 +265,98 @@ h1 {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (max-width: 1170px) {
+  body main .contenedor {
+    width: 90%;
+  }
+  body main .contenedor .derecha {
+    margin-top: 20px;
+    min-height: 270px;
+  }
+  body main .contenedor .derecha .contenedor-total {
+    top: 100px;
+    left: 10%;
+  }
+  body main .contenedor .derecha .contenedor-amount {
+    left: 10%;
+  }
+  body main .contenedor .derecha .input-total {
+    right: 10%;
+    top: 120px;
+  }
+  body main .contenedor .derecha .input-amount {
+    right: 10%;
+    top: 40px;
+  }
+  body main .contenedor .derecha .contenedor-reset {
+    width: 100%;
+    position: absolute;
+    bottom: 1.5rem;
+  }
+  body main .contenedor .derecha .contenedor-reset .reset {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    display: block;
+    text-decoration: none;
+    padding: 5px 0;
+    font-size: 24px;
+    border-radius: 5px;
+    color: #00494d;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  body main .contenedor {
+    width: 100%;
+  }
+  body main .derecha .input-total, body main .derecha .input-amount {
+    font-size: 34px;
+  }
+  body main .derecha .contenedor-amount {
+    top: 10px;
+    left: 3%;
+  }
+  body main .derecha .contenedor-amount .texto-pr, body main .derecha .contenedor-amount .texto-sc {
+    font-size: 16px;
+  }
+  body main .derecha .contenedor-total {
+    top: 90px;
+    left: 3%;
+  }
+  body main .derecha .contenedor-total .texto-pr, body main .derecha .contenedor-total .texto-sc {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body main .contenedor {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .contenedor .izquierda, body main .contenedor .derecha {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body main .contenedor .izquierda .contenedor-botones .button, body main .contenedor .izquierda .contenedor-botones .custom {
+    vertical-align: middle;
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  body main .contenedor .derecha .texto-pr, body main .contenedor .derecha .texto-sc {
+    font-size: 14px;
+  }
+  body main .contenedor .derecha .input-total, body main .contenedor .derecha .input-amount {
+    font-size: 28px;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
