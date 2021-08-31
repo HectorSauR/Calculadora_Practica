@@ -9,6 +9,8 @@ var button = document.getElementsByClassName('button');
 
 var porcent;
 
+
+
 function resetComprobar(e){
     if((bill > 0) && 
     (numPeople > 0) && 
@@ -19,9 +21,9 @@ function resetComprobar(e){
         total.value = (bill/numPeople) + parseFloat(amount.value);
         amount.value = "$ "+amount.value;
         total.value = "$ "+total.value;
-        reset.enabled;
     }else{
-        document.getElementById('reset').style.background =  "hsla(172, 76%, 63%, 0.118)";
+        reset.disabled;
+        reset.style.background =  "hsla(172, 76%, 63%, 0.118)";
         if(numPeople == 0){
             document.getElementById('aviso-error').style.display = "inline-block";
         }else{
@@ -30,17 +32,17 @@ function resetComprobar(e){
     }
 }
 
-document.getElementById('bill').addEventListener('focusout',function(e){
+document.getElementById('bill').addEventListener('change',function(e){
     bill = parseFloat(this.value);
     resetComprobar();
 })
 
-document.getElementById('numPeople').addEventListener('focusout',function(e){
+document.getElementById('numPeople').addEventListener('change',function(e){
     numPeople = parseFloat(this.value);
     resetComprobar();
 })
 
-document.getElementById('custom').addEventListener('focusout',function(e){
+document.getElementById('custom').addEventListener('change',function(e){
     porcent = parseFloat(this.value)/100;
     resetComprobar();
 })
@@ -51,10 +53,12 @@ function asignar(e) {
 }
 
 for (var i = 0; i < button.length; i++) {
-    button[i].addEventListener('focus',asignar);
+    button[i].addEventListener('click',asignar);
 }
 
+
 reset.addEventListener('click',function(e){
+    e.preventDefault;
     amount.value = "";
     total.value = "";
     document.getElementById('bill').value = "";
@@ -65,13 +69,11 @@ reset.addEventListener('click',function(e){
     if((bill != null && bill != 0) && 
     (numPeople != null && numPeople != 0) && 
     (porcent != null && porcent != 0)) {
-        document.getElementById('reset').style.background =  "hsl(172, 67%, 45%)";
+        reset.style.background =  "hsl(172, 67%, 45%)";
     }else{
-        document.getElementById('reset').style.background =  "hsla(172, 76%, 63%, 0.118)";
-        reset.disabled
+        reset.style.background =  "hsla(172, 76%, 63%, 0.118)";
     }
-})
-
+});
 
 
 

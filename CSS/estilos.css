@@ -285,10 +285,12 @@ h1 {
   body main .contenedor .derecha .input-total {
     right: 10%;
     top: 120px;
+    font-size: 35px;
   }
   body main .contenedor .derecha .input-amount {
     right: 10%;
     top: 40px;
+    font-size: 35px;
   }
   body main .contenedor .derecha .contenedor-reset {
     width: 100%;
@@ -349,6 +351,17 @@ h1 {
     vertical-align: middle;
     width: 47%;
   }
+  body main .contenedor .derecha .input-total, body main .contenedor .derecha .input-amount {
+    font-size: 25px;
+  }
+  body main .contenedor .derecha .input-total {
+    right: 10%;
+    top: 135px;
+  }
+  body main .contenedor .derecha .input-amount {
+    right: 10%;
+    top: 55px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -356,7 +369,15 @@ h1 {
     font-size: 14px;
   }
   body main .contenedor .derecha .input-total, body main .contenedor .derecha .input-amount {
-    font-size: 28px;
+    font-size: 20px;
+  }
+  body main .contenedor .derecha .input-total {
+    right: 10%;
+    top: 130px;
+  }
+  body main .contenedor .derecha .input-amount {
+    right: 10%;
+    top: 50px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

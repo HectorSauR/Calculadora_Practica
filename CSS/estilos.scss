@@ -268,10 +268,12 @@ h1{
                     .input-total{
                         right: 10%;
                         top: 120px;
+                        font-size: 35px;
                     }
                     .input-amount{
                         right: 10%;
                         top: 40px;
+                        font-size: 35px;
                     }
                     .contenedor-reset{
                         width: 100%;
@@ -351,8 +353,21 @@ h1{
                         }
                     }
                 }
-               
+                .derecha{
+                    .input-total,.input-amount{
+                        font-size: 25px;
+                    }
+                    .input-total{
+                        right: 10%;
+                        top: 135px;
+                    }
+                    .input-amount{
+                        right: 10%;
+                        top: 55px;
+                    }
+                }
             }
+
         }
     }
 }
@@ -366,7 +381,15 @@ h1{
                         font-size: 14px;
                     }
                     .input-total,.input-amount{
-                        font-size: 28px;
+                        font-size: 20px;
+                    }
+                    .input-total{
+                        right: 10%;
+                        top: 130px;
+                    }
+                    .input-amount{
+                        right: 10%;
+                        top: 50px;
                     }
                 }
             }
